@@ -14,13 +14,11 @@
   )
 
 (defn print-num [num]
-  (if (= true (is-fizz-buzz num))
-    "FizzBuzz"
-    (if (= true (is-fizz num))
-      "Fizz"
-      (if (= true (is-buzz num))
-        "Buzz"
-        (str num))))
+  (cond
+    (= true (is-fizz-buzz num)) "FizzBuzz"
+    (= true (is-fizz num)) "Fizz"
+    (= true (is-buzz num)) "Buzz"
+    :else (str num))
   )
 
 (defn print-all []
